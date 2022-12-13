@@ -2,7 +2,7 @@
 #include<string>
 
 using namespace std;
-
+// Reversed text
 string func1(string x){
 	int i = 0, L = x.size();
 	string y = "";
@@ -12,7 +12,7 @@ string func1(string x){
 	}
 	return y;
 }
-
+// toupper text
 string func2(string x){
 	int i = 0, L = x.size();
 	string y = "";
@@ -22,7 +22,7 @@ string func2(string x){
 	}
 	return y;	
 }
-
+// tolower text
 string func3(string x){
 	int i = 0, L = x.size();
 	string y = "";
@@ -34,8 +34,17 @@ string func3(string x){
 }
 
 int main(){
-    cout >> "Input text: "
-    cout >> "Reversed text: "
-    cout >> "Palindrome: "
+	string text;
+	string Answer;
+    cout << "Input text: ";
+	cin >> text;
+    cout << "Reversed text: " << func1(text) << "\n";
+	if(func1(func2(text))==func2(text)){
+		Answer = "Yes";
+
+	}else{
+		Answer = "No";
+	}
+    cout << "Palindrome: " << Answer;
     return 0;
 }
